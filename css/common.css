@@ -33,42 +33,49 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 57, common.scss */
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 68, common.scss */
 body, html {
   height: 100%;
   font-family: "Lato-Regular";
   font-size: 14px;
 }
 
-/* line 63, common.scss */
+/* line 74, common.scss */
 .no-left {
   padding-left: 0;
 }
 
-/* line 67, common.scss */
+/* line 78, common.scss */
 a, span {
   display: inline-block;
 }
-/* line 69, common.scss */
+/* line 80, common.scss */
 a:hover, span:hover {
   text-decoration: none;
 }
 
-/* line 74, common.scss */
+/* line 85, common.scss */
 .no-right {
   padding-right: 0;
 }
 
-/* line 78, common.scss */
+/* line 89, common.scss */
 header {
   height: 190px;
   box-shadow: 10px 0px 15px 5px #928985;
 }
-/* line 81, common.scss */
+/* line 92, common.scss */
 header .logo {
   padding-top: 33px;
 }
-/* line 84, common.scss */
+/* line 95, common.scss */
 header .new_order {
   width: 267px;
   height: 68px;
@@ -80,12 +87,12 @@ header .new_order {
   margin-top: 33px;
   margin-left: 20px;
 }
-/* line 95, common.scss */
+/* line 106, common.scss */
 header .phone {
   font-size: 18px;
   color: #969696;
 }
-/* line 98, common.scss */
+/* line 109, common.scss */
 header .phone span {
   color: #000;
   font-size: 36px;
@@ -93,13 +100,13 @@ header .phone span {
   padding-top: 28px;
   margin-left: 15px;
 }
-/* line 105, common.scss */
+/* line 116, common.scss */
 header .phone i {
   color: #2b2269;
   font-style: normal;
   font-family: "Lato-Semibold";
 }
-/* line 110, common.scss */
+/* line 121, common.scss */
 header .phone a {
   position: absolute;
   left: 100%;
@@ -109,11 +116,11 @@ header .phone a {
   color: #2b2269;
   border-bottom: 1px dotted #2b2269;
 }
-/* line 118, common.scss */
+/* line 129, common.scss */
 header .phone a:hover {
   border-bottom: 1px dotted transparent;
 }
-/* line 123, common.scss */
+/* line 134, common.scss */
 header .nav {
   float: right;
   color: #322574;
@@ -121,58 +128,59 @@ header .nav {
   text-transform: uppercase;
   margin-top: 1px;
 }
-/* line 129, common.scss */
+/* line 140, common.scss */
 header .nav li {
   float: left;
 }
-/* line 131, common.scss */
+/* line 142, common.scss */
 header .nav li a {
   line-height: 88px;
   padding: 0 19px;
   font-size: 18px;
   color: #000;
 }
-/* line 136, common.scss */
+/* line 147, common.scss */
 header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header .nav li a.active {
   color: #322574;
   background: transparent url("../images/menu_hover.png") no-repeat 50% 100%;
 }
 
 @media (min-width: 1260px) {
-  /* line 146, common.scss */
+  /* line 157, common.scss */
   header .nav {
     margin-right: -19px;
   }
 }
 @media (max-width: 1260px) {
-  /* line 155, common.scss */
+  /* line 166, common.scss */
   header .nav li a {
     padding: 0 17px;
   }
 }
-/* line 162, common.scss */
+/* line 173, common.scss */
 .wrapper {
   min-width: 1170px;
+  overflow: hidden;
 }
 
-/* line 165, common.scss */
+/* line 177, common.scss */
 .container {
   min-width: 1170px;
 }
 
-/* line 168, common.scss */
+/* line 180, common.scss */
 .slider {
   position: relative;
   z-index: -1;
   background: url("../images/slider.png"), linear-gradient(transparent 70%, #19153b);
   height: 929px;
 }
-/* line 173, common.scss */
+/* line 185, common.scss */
 .slider .fon {
   background: url("../images/slider_fon.png") no-repeat;
   height: 1485px;
 }
-/* line 177, common.scss */
+/* line 189, common.scss */
 .slider .spec {
   position: relative;
   z-index: 1;
@@ -182,7 +190,7 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   font-size: 36px;
   background: linear-gradient(to right, #292e64 0%, #292e64 30%, transparent 30%);
 }
-/* line 185, common.scss */
+/* line 197, common.scss */
 .slider .spec h1 {
   background-color: #292e64;
   float: left;
@@ -190,20 +198,20 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   line-height: 88px;
   margin: 0;
 }
-/* line 191, common.scss */
+/* line 203, common.scss */
 .slider .spec h1 span {
   font-family: "Lato-Bold";
 }
-/* line 196, common.scss */
+/* line 208, common.scss */
 .slider .slider_bottom {
-  height: 840px;
+  height: 1010px;
   position: relative;
   margin-top: 555px;
   z-index: -1;
   background: linear-gradient(to top, #19153b 85%, transparent 100%);
 }
 
-/* line 204, common.scss */
+/* line 216, common.scss */
 h2.title {
   color: #fff;
   font-size: 30px;
@@ -216,32 +224,150 @@ h2.title {
   left: 100%;
   margin-left: calc(-25% + 15px);
 }
+/* line 227, common.scss */
+h2.title.left {
+  right: 100%;
+  left: 0;
+  margin-right: -17%;
+  text-align: right;
+  margin-left: 0;
+  left: auto;
+}
 
-/* line 216, common.scss */
+/* line 236, common.scss */
+.fon_triangle {
+  height: 1205px;
+  position: absolute;
+  width: 100%;
+  top: 1170px;
+  z-index: 9999;
+  background: url("../images/right_triangle.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+/* line 247, common.scss */
+p {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Roboto-Light";
+  font-weight: normal;
+  margin-bottom: 35px;
+  line-height: 1.6em;
+}
+
+/* line 256, common.scss */
+.description {
+  padding-top: 65px;
+  background: url("../images/description_fon.png") 40%;
+}
+/* line 258, common.scss */
+.description h1 {
+  font-family: "Lato-Light";
+  font-size: 30px;
+  color: #1a163d;
+  text-transform: uppercase;
+  margin-bottom: 95px;
+}
+/* line 264, common.scss */
+.description h1 span {
+  font-size: 36px;
+  font-family: "Lato-Medium";
+}
+/* line 269, common.scss */
+.description .description_block {
+  float: left;
+  font-size: 20px;
+  color: #2b2269;
+  font-family: "Lato-Semibold";
+  margin-right: 60px;
+  margin-bottom: 105px;
+}
+/* line 277, common.scss */
+.description .description_block.double img {
+  vertical-align: -40px;
+}
+/* line 280, common.scss */
+.description .description_block.double span {
+  width: 210px;
+}
+/* line 285, common.scss */
+.description .margin_right {
+  margin-right: 25px;
+}
+/* line 288, common.scss */
+.description .margin_left {
+  margin-left: 25px;
+}
+
+/* line 294, common.scss */
 #main_slider {
   position: absolute;
-  overflow: hidden;
   top: 530px;
   width: 1170px;
 }
-/* line 221, common.scss */
-#main_slider .item {
-  height: 330px;
-}
-/* line 223, common.scss */
-#main_slider .item img {
-  height: 100%;
-  object-fit: cover;
-}
-/* line 228, common.scss */
-#main_slider .slick-arrow {
-  width: 34px;
-  height: 34px;
-  top: 0;
-  position: absolute;
+/* line 298, common.scss */
+#main_slider .title {
+  margin-top: 0;
 }
 
-/* line 235, common.scss */
+/* line 302, common.scss */
+#main_slider_inner {
+  margin-top: -300px;
+  margin-bottom: 60px;
+}
+/* line 305, common.scss */
+#main_slider_inner .item {
+  height: 330px;
+  position: relative;
+  background-color: #000;
+}
+/* line 309, common.scss */
+#main_slider_inner .item img {
+  height: 100%;
+  opacity: .6;
+  object-fit: cover;
+}
+/* line 314, common.scss */
+#main_slider_inner .item .label {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  z-index: 9999;
+  width: 60%;
+  border-bottom: 1px solid #b1aaa7;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 50px;
+  text-align: right;
+  padding-right: 0;
+  margin-top: 210px;
+  border-radius: 0;
+}
+/* line 330, common.scss */
+#main_slider_inner .slick-arrow {
+  width: 34px;
+  height: 34px;
+  top: -80px;
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.4) url("../images/slider_arrow.png") no-repeat 12px 5px;
+  opacity: .4;
+}
+/* line 338, common.scss */
+#main_slider_inner .slick-arrow:hover {
+  background: rgba(255, 255, 255, 0.6) url("../images/slider_arrow.png") no-repeat 12px 5px;
+}
+/* line 341, common.scss */
+#main_slider_inner .slick-arrow.slick-next {
+  left: 36px;
+}
+/* line 344, common.scss */
+#main_slider_inner .slick-arrow.slick-prev {
+  transform: rotate(180deg);
+}
+
+/* line 349, common.scss */
 .give_sale {
   width: 295px;
   height: 64px;
