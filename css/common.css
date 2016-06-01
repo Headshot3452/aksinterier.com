@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato-Medium";
+  src: url("../fonts/Lato-Medium.eot");
+  src: url("../fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Medium.woff") format("woff"), url("../fonts/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../fonts/Lato-Light.eot");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato-Semibold";
+  src: url("../fonts/Lato-Semibold.eot");
+  src: url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.eot");
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 57, common.scss */
+body, html {
+  height: 100%;
+  font-family: "Lato-Regular";
+  font-size: 14px;
+}
+
+/* line 63, common.scss */
+.no-left {
+  padding-left: 0;
+}
+
+/* line 67, common.scss */
+a, span {
+  display: inline-block;
+}
+/* line 69, common.scss */
+a:hover, span:hover {
+  text-decoration: none;
+}
+
+/* line 74, common.scss */
+.no-right {
+  padding-right: 0;
+}
+
+/* line 78, common.scss */
+header {
+  height: 190px;
+  box-shadow: 10px 0px 15px 5px #928985;
+}
+/* line 81, common.scss */
+header .logo {
+  padding-top: 33px;
+}
+/* line 84, common.scss */
+header .new_order {
+  width: 267px;
+  height: 68px;
+  background-color: #322574;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 68px;
+  margin-top: 33px;
+  margin-left: 20px;
+}
+/* line 95, common.scss */
+header .phone {
+  font-size: 18px;
+  color: #969696;
+}
+/* line 98, common.scss */
+header .phone span {
+  color: #000;
+  font-size: 36px;
+  font-family: "Lato-Light";
+  padding-top: 28px;
+  margin-left: 15px;
+}
+/* line 105, common.scss */
+header .phone i {
+  color: #2b2269;
+  font-style: normal;
+  font-family: "Lato-Semibold";
+}
+/* line 110, common.scss */
+header .phone a {
+  position: absolute;
+  left: 100%;
+  width: 221px;
+  margin-left: -221px;
+  font-size: 18px;
+  color: #2b2269;
+  border-bottom: 1px dotted #2b2269;
+}
+/* line 118, common.scss */
+header .phone a:hover {
+  border-bottom: 1px dotted transparent;
+}
+/* line 123, common.scss */
+header .nav {
+  float: right;
+  color: #322574;
+  font-family: "Lato-Medium";
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+/* line 129, common.scss */
+header .nav li {
+  float: left;
+}
+/* line 131, common.scss */
+header .nav li a {
+  line-height: 88px;
+  padding: 0 19px;
+  font-size: 18px;
+  color: #000;
+}
+/* line 136, common.scss */
+header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header .nav li a.active {
+  color: #322574;
+  background: transparent url("../images/menu_hover.png") no-repeat 50% 100%;
+}
+
+@media (min-width: 1260px) {
+  /* line 146, common.scss */
+  header .nav {
+    margin-right: -19px;
+  }
+}
+@media (max-width: 1260px) {
+  /* line 155, common.scss */
+  header .nav li a {
+    padding: 0 17px;
+  }
+}
+/* line 162, common.scss */
+.wrapper {
+  min-width: 1170px;
+}
+
+/* line 165, common.scss */
+.container {
+  min-width: 1170px;
+}
+
+/* line 168, common.scss */
+.slider {
+  position: relative;
+  z-index: -1;
+  background: url("../images/slider.png"), linear-gradient(transparent 70%, #19153b);
+  height: 929px;
+}
+/* line 173, common.scss */
+.slider .fon {
+  background: url("../images/slider_fon.png") no-repeat;
+  height: 1485px;
+}
+/* line 177, common.scss */
+.slider .spec {
+  position: relative;
+  z-index: 1;
+  top: 180px;
+  color: #fff;
+  font-family: "Lato-Light";
+  font-size: 36px;
+  background: linear-gradient(to right, #292e64 0%, #292e64 30%, transparent 30%);
+}
+/* line 185, common.scss */
+.slider .spec h1 {
+  background-color: #292e64;
+  float: left;
+  padding-right: 35px;
+  line-height: 88px;
+  margin: 0;
+}
+/* line 191, common.scss */
+.slider .spec h1 span {
+  font-family: "Lato-Bold";
+}
+/* line 196, common.scss */
+.slider .slider_bottom {
+  height: 840px;
+  position: relative;
+  margin-top: 555px;
+  z-index: -1;
+  background: linear-gradient(to top, #19153b 85%, transparent 100%);
+}
+
+/* line 204, common.scss */
+h2.title {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #fff;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  position: relative;
+  left: 100%;
+  margin-left: calc(-25% + 15px);
+}
+
+/* line 216, common.scss */
+#main_slider {
+  position: absolute;
+  overflow: hidden;
+  top: 530px;
+  width: 1170px;
+}
+/* line 221, common.scss */
+#main_slider .item {
+  height: 330px;
+}
+/* line 223, common.scss */
+#main_slider .item img {
+  height: 100%;
+  object-fit: cover;
+}
+/* line 228, common.scss */
+#main_slider .slick-arrow {
+  width: 34px;
+  height: 34px;
+  top: 0;
+  position: absolute;
+}
+
+/* line 235, common.scss */
+.give_sale {
+  width: 295px;
+  height: 64px;
+  background-color: #fff;
+  color: #161450;
+  font-size: 22px;
+  text-align: center;
+  line-height: 64px;
+  top: 513px;
+  z-index: 9999;
+  position: absolute;
+}
