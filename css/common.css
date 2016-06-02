@@ -40,42 +40,55 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 68, common.scss */
+@font-face {
+  font-family: "lato-LightItalic";
+  src: url("../fonts/lato-lightitalic.eot");
+  src: url("../fonts/lato-lightitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-lightitalic.woff") format("woff"), url("../fonts/lato-lightitalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 79, common.scss */
 body, html {
   height: 100%;
   font-family: "Lato-Regular";
   font-size: 14px;
 }
 
-/* line 74, common.scss */
+/* line 85, common.scss */
 .no-left {
   padding-left: 0;
 }
 
-/* line 78, common.scss */
+/* line 89, common.scss */
+.no-all {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 94, common.scss */
 a, span {
   display: inline-block;
 }
-/* line 80, common.scss */
+/* line 96, common.scss */
 a:hover, span:hover {
   text-decoration: none;
 }
 
-/* line 85, common.scss */
+/* line 101, common.scss */
 .no-right {
   padding-right: 0;
 }
 
-/* line 89, common.scss */
+/* line 105, common.scss */
 header {
   height: 190px;
   box-shadow: 10px 0px 15px 5px #928985;
 }
-/* line 92, common.scss */
+/* line 108, common.scss */
 header .logo {
   padding-top: 33px;
 }
-/* line 95, common.scss */
+/* line 111, common.scss */
 header .new_order {
   width: 267px;
   height: 68px;
@@ -87,12 +100,12 @@ header .new_order {
   margin-top: 33px;
   margin-left: 20px;
 }
-/* line 106, common.scss */
+/* line 122, common.scss */
 header .phone {
   font-size: 18px;
   color: #969696;
 }
-/* line 109, common.scss */
+/* line 125, common.scss */
 header .phone span {
   color: #000;
   font-size: 36px;
@@ -100,13 +113,13 @@ header .phone span {
   padding-top: 28px;
   margin-left: 15px;
 }
-/* line 116, common.scss */
+/* line 132, common.scss */
 header .phone i {
   color: #2b2269;
   font-style: normal;
   font-family: "Lato-Semibold";
 }
-/* line 121, common.scss */
+/* line 137, common.scss */
 header .phone a {
   position: absolute;
   left: 100%;
@@ -116,11 +129,11 @@ header .phone a {
   color: #2b2269;
   border-bottom: 1px dotted #2b2269;
 }
-/* line 129, common.scss */
+/* line 145, common.scss */
 header .phone a:hover {
   border-bottom: 1px dotted transparent;
 }
-/* line 134, common.scss */
+/* line 150, common.scss */
 header .nav {
   float: right;
   color: #322574;
@@ -128,43 +141,43 @@ header .nav {
   text-transform: uppercase;
   margin-top: 1px;
 }
-/* line 140, common.scss */
+/* line 156, common.scss */
 header .nav li {
   float: left;
 }
-/* line 142, common.scss */
+/* line 158, common.scss */
 header .nav li a {
   line-height: 88px;
   padding: 0 19px;
   font-size: 18px;
   color: #000;
 }
-/* line 147, common.scss */
+/* line 163, common.scss */
 header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header .nav li a.active {
   color: #322574;
   background: transparent url("../images/menu_hover.png") no-repeat 50% 100%;
 }
 
 @media (min-width: 1260px) {
-  /* line 157, common.scss */
+  /* line 173, common.scss */
   header .nav {
     margin-right: -19px;
   }
 }
 @media (max-width: 1260px) {
-  /* line 166, common.scss */
+  /* line 182, common.scss */
   header .nav li a {
     padding: 0 17px;
   }
 }
-/* line 174, common.scss */
+/* line 190, common.scss */
 .wrapper {
   min-width: 1170px;
   overflow: hidden;
   background: linear-gradient(transparent 0px, transparent 1675px, #19153B 1675px, #19153b 1850px, transparent 1850px);
 }
 
-/* line 180, common.scss */
+/* line 196, common.scss */
 .triangle_fon {
   background: url("../images/right_triangle.png");
   background-repeat: no-repeat;
@@ -172,29 +185,29 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
 }
 
 @media (max-width: 1750px) {
-  /* line 187, common.scss */
+  /* line 203, common.scss */
   .triangle_fon {
     background-position: calc(100% + 100px) 1016px;
   }
 }
 @media (max-width: 1540px) {
-  /* line 193, common.scss */
+  /* line 209, common.scss */
   .triangle_fon {
     background-position: calc(100% + 200px) 1016px;
   }
 }
 @media (max-width: 1340px) {
-  /* line 199, common.scss */
+  /* line 215, common.scss */
   .triangle_fon {
     background-position: calc(100% + 300px) 1016px;
   }
 }
-/* line 204, common.scss */
+/* line 220, common.scss */
 .container {
   min-width: 1170px;
 }
 
-/* line 207, common.scss */
+/* line 223, common.scss */
 .slider {
   position: relative;
   z-index: -1;
@@ -202,13 +215,13 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   background-repeat: no-repeat;
   height: 969px;
 }
-/* line 213, common.scss */
+/* line 229, common.scss */
 .slider .fon {
   background: url("../images/slider_fon.png"), linear-gradient(transparent 0, #19153b 969px);
   height: 1485px;
   background-repeat: no-repeat;
 }
-/* line 218, common.scss */
+/* line 234, common.scss */
 .slider .spec {
   position: relative;
   z-index: 1;
@@ -218,7 +231,7 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   font-size: 36px;
   background: linear-gradient(to right, #292e64 0%, #292e64 30%, transparent 30%);
 }
-/* line 226, common.scss */
+/* line 242, common.scss */
 .slider .spec h1 {
   background-color: #292e64;
   float: left;
@@ -226,12 +239,12 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   line-height: 88px;
   margin: 0;
 }
-/* line 232, common.scss */
+/* line 248, common.scss */
 .slider .spec h1 span {
   font-family: "Lato-Bold";
 }
 
-/* line 238, common.scss */
+/* line 254, common.scss */
 h2.title {
   color: #fff;
   font-size: 30px;
@@ -244,7 +257,7 @@ h2.title {
   left: 100%;
   margin-left: calc(-25% + 15px);
 }
-/* line 249, common.scss */
+/* line 265, common.scss */
 h2.title.left {
   right: 100%;
   left: 0;
@@ -254,7 +267,7 @@ h2.title.left {
   left: auto;
 }
 
-/* line 258, common.scss */
+/* line 274, common.scss */
 p {
   color: #fff;
   font-size: 16px;
@@ -264,7 +277,7 @@ p {
   line-height: 1.6em;
 }
 
-/* line 267, common.scss */
+/* line 283, common.scss */
 .description {
   padding-top: 65px;
   background-color: #19153b;
@@ -273,7 +286,7 @@ p {
   z-index: -1;
   background: url("../images/description_fon.png") 40%;
 }
-/* line 273, common.scss */
+/* line 289, common.scss */
 .description h1 {
   font-family: "Lato-Light";
   font-size: 30px;
@@ -281,12 +294,12 @@ p {
   text-transform: uppercase;
   margin-bottom: 95px;
 }
-/* line 279, common.scss */
+/* line 295, common.scss */
 .description h1 span {
   font-size: 36px;
   font-family: "Lato-Medium";
 }
-/* line 284, common.scss */
+/* line 300, common.scss */
 .description .description_block {
   float: left;
   font-size: 20px;
@@ -295,58 +308,58 @@ p {
   margin-right: 60px;
   margin-bottom: 105px;
 }
-/* line 292, common.scss */
+/* line 308, common.scss */
 .description .description_block.double img {
   vertical-align: -40px;
 }
-/* line 295, common.scss */
+/* line 311, common.scss */
 .description .description_block.double span {
   width: 210px;
 }
-/* line 300, common.scss */
+/* line 316, common.scss */
 .description .margin_right {
   margin-right: 25px;
 }
-/* line 303, common.scss */
+/* line 319, common.scss */
 .description .margin_left {
   margin-left: 25px;
 }
 
-/* line 309, common.scss */
+/* line 325, common.scss */
 #main_slider {
   position: absolute;
   top: 530px;
   width: 1170px;
 }
-/* line 313, common.scss */
+/* line 329, common.scss */
 #main_slider .title {
   margin-top: 0;
 }
 
-/* line 317, common.scss */
+/* line 333, common.scss */
 .content {
   padding-bottom: 40px;
 }
 
-/* line 320, common.scss */
+/* line 336, common.scss */
 #main_slider_inner {
   margin-top: -340px;
   margin-bottom: 60px;
 }
-/* line 323, common.scss */
+/* line 339, common.scss */
 #main_slider_inner .item {
   height: 330px;
   position: relative;
   background-color: #000;
 }
-/* line 327, common.scss */
+/* line 343, common.scss */
 #main_slider_inner .item img {
   height: 100%;
   opacity: .6;
   object-fit: cover;
   width: 100%;
 }
-/* line 333, common.scss */
+/* line 349, common.scss */
 #main_slider_inner .item .label {
   font-size: 20px;
   color: #fff;
@@ -362,7 +375,7 @@ p {
   margin-top: 210px;
   border-radius: 0;
 }
-/* line 349, common.scss */
+/* line 365, common.scss */
 #main_slider_inner .slick-arrow {
   width: 34px;
   height: 34px;
@@ -372,20 +385,20 @@ p {
   background: rgba(255, 255, 255, 0.4) url("../images/slider_arrow.png") no-repeat 12px 5px;
   opacity: .4;
 }
-/* line 357, common.scss */
+/* line 373, common.scss */
 #main_slider_inner .slick-arrow:hover {
   background: rgba(255, 255, 255, 0.6) url("../images/slider_arrow.png") no-repeat 12px 5px;
 }
-/* line 360, common.scss */
+/* line 376, common.scss */
 #main_slider_inner .slick-arrow.slick-next {
   left: 36px;
 }
-/* line 363, common.scss */
+/* line 379, common.scss */
 #main_slider_inner .slick-arrow.slick-prev {
   transform: rotate(180deg);
 }
 
-/* line 368, common.scss */
+/* line 384, common.scss */
 .give_sale {
   width: 295px;
   height: 64px;
@@ -399,13 +412,13 @@ p {
   position: absolute;
 }
 
-/* line 381, common.scss */
+/* line 397, common.scss */
 .portfolio {
   background: url("/images/portfolio_fon.png");
-  height: 1107px;
+  height: 1050px;
   padding-top: 65px;
 }
-/* line 385, common.scss */
+/* line 401, common.scss */
 .portfolio .download_base {
   width: 310px;
   height: 64px;
@@ -417,7 +430,215 @@ p {
   padding-left: 40px;
   background: #fff url("/images/projects.png") no-repeat 17px 18px;
 }
-/* line 396, common.scss */
+/* line 412, common.scss */
 .portfolio .title {
   margin-top: 5px;
+}
+/* line 415, common.scss */
+.portfolio .gallery {
+  margin-top: 74px;
+}
+/* line 417, common.scss */
+.portfolio .gallery div {
+  background-color: #000;
+}
+/* line 420, common.scss */
+.portfolio .gallery a {
+  width: 100%;
+}
+/* line 423, common.scss */
+.portfolio .gallery img {
+  opacity: .6;
+  height: 251px;
+  width: 100%;
+  object-fit: cover;
+  cursor: url("/images/zoom.png"), auto;
+}
+/* line 430, common.scss */
+.portfolio .gallery .label {
+  font-size: 20px;
+  background-color: transparent;
+  position: absolute;
+  color: #fff;
+  z-index: 9999;
+  border-bottom: 1px solid #9b918e;
+  top: 155px;
+  margin-top: 0;
+  line-height: 30px;
+  width: 225px;
+  text-align: right;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: normal;
+}
+/* line 446, common.scss */
+.portfolio .gallery .label span {
+  font-size: 18px;
+  text-transform: none;
+  font-family: "lato-LightItalic";
+}
+
+/* line 454, common.scss */
+.order_and_reviews {
+  background: url("/images/reviews_fon.png");
+  height: 880px;
+  background-position: 260px;
+}
+/* line 458, common.scss */
+.order_and_reviews .orders {
+  position: relative;
+  z-index: -1;
+  height: 355px;
+  background: #d6d6d6;
+}
+/* line 463, common.scss */
+.order_and_reviews .orders h1 {
+  font-size: 30px;
+  color: #19153c;
+  text-transform: uppercase;
+  font-family: "Lato-Bold";
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  background: url("/images/orders.png") no-repeat center bottom;
+}
+/* line 474, common.scss */
+.order_and_reviews .orders h2 {
+  color: #19153c;
+  font-family: "Lato-Light";
+  font-size: 30px;
+  text-align: center;
+}
+/* line 481, common.scss */
+.order_and_reviews input {
+  height: 68px;
+  width: 400px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  position: absolute;
+  margin-left: 170px;
+  z-index: 9999;
+  color: #b8b8b8;
+  font-size: 36px;
+  padding-left: 30px;
+  font-family: "Lato-Medium";
+  margin-top: -130px;
+}
+/* line 496, common.scss */
+.order_and_reviews .arrow_right {
+  width: 21px;
+  height: 37px;
+  background: url("/images/orders_arrow.png");
+  margin-top: -113px;
+  margin-left: 625px;
+  position: absolute;
+}
+/* line 504, common.scss */
+.order_and_reviews .call_me {
+  width: 303px;
+  height: 68px;
+  background-color: #322574;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  padding-left: 35px;
+  line-height: 68px;
+  position: absolute;
+  margin-top: -130px;
+  margin-left: 695px;
+  background: #322574 url("/images/call_me.png") no-repeat 40px 23px;
+}
+/* line 518, common.scss */
+.order_and_reviews .reviews {
+  padding-top: 30px;
+  height: 525px;
+}
+/* line 521, common.scss */
+.order_and_reviews .reviews h2 {
+  color: #19153c;
+  border-color: #19153c;
+  margin-bottom: 75px;
+}
+
+/* line 528, common.scss */
+.contacts {
+  height: 625px;
+  background-image: url("/images/contacts_fon.png");
+}
+/* line 531, common.scss */
+.contacts h2.title {
+  margin-top: 70px;
+  margin-bottom: 65px;
+}
+/* line 535, common.scss */
+.contacts #manager {
+  float: left;
+  margin-right: 30px;
+}
+/* line 539, common.scss */
+.contacts input {
+  width: 100%;
+  height: 68px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #a2a4b6;
+}
+/* line 551, common.scss */
+.contacts h3 {
+  font-family: "lato-LightItalic";
+  color: #fff;
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+/* line 558, common.scss */
+.contacts .main {
+  color: #fff;
+  font-size: 24px;
+  padding-left: 70px;
+  margin-bottom: 45px;
+}
+/* line 564, common.scss */
+.contacts .email {
+  background: url("/images/contacts_email.png") no-repeat left center;
+}
+/* line 567, common.scss */
+.contacts .phone {
+  background: url("/images/contacts_phone.png") no-repeat left center;
+}
+/* line 570, common.scss */
+.contacts .locate {
+  background: url("/images/contacts_locate.png") no-repeat left center;
+}
+/* line 573, common.scss */
+.contacts .work {
+  background: url("/images/contacts_work.png") no-repeat left center;
+}
+/* line 575, common.scss */
+.contacts .work i {
+  font-size: 18px;
+  font-style: normal;
+  display: inline-block;
+}
+/* line 579, common.scss */
+.contacts .work i:last-child {
+  margin-left: 52px;
+}
+/* line 584, common.scss */
+.contacts a {
+  width: 568px;
+  height: 64px;
+  background-color: #fff;
+  font-size: 22px;
+  color: #161450;
+  text-align: center;
+  line-height: 64px;
 }

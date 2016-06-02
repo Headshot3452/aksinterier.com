@@ -6,6 +6,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
 	<link href="css/slick.css" rel="stylesheet" type="text/css" />
+	<link href="css/lightbox.css" rel="stylesheet" type="text/css" />
 
 	<title>Aksinterier</title>
 </head>
@@ -13,6 +14,7 @@
 	<script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/slick.min.js" type="text/javascript"></script>
+	<script src="js/lightbox.js" type="text/javascript"></script>
 
 	<div class="wrapper">
 		<div class="triangle_fon">
@@ -140,9 +142,113 @@
 				<div class="row">
 					<a href = "" class="download_base">Скачать базу проектов</a>
 					<h2 class="title">Портфолио</h2>
+					<div class="gallery">
+						<div class="col-xs-4 no-all">
+							<a href="/images/portfolio1.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio1.png" alt = "Двухуровневый">
+								<div class="label"><span>Тип: </span> Двухуровневый</div>
+							</a>
+						</div>
+						<div class="col-xs-8 no-all">
+							<a href="/images/portfolio2.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio2.png" alt = "Глянцевый">
+								<div class="label"><span>Тип: </span> Глянцевый</div>
+							</a>
+						</div>
+						<div class="col-xs-6 no-all">
+							<a href="/images/portfolio3.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio3.png" alt = "Глянцевый">
+								<div class="label"><span>Тип: </span> Глянцевый</div>
+							</a>
+						</div>
+						<div class="col-xs-6 no-all">
+							<a href="/images/portfolio4.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio4.png" alt = "Глянцевый">
+								<div class="label"><span>Тип: </span> Глянцевый</div>
+							</a>
+						</div>
+						<div class="col-xs-9 no-all">
+							<a href="/images/portfolio5.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio5.png" alt = "Фотопечать">
+								<div class="label"><span>Тип: </span> Фотопечать</div>
+							</a>
+						</div>
+						<div class="col-xs-3 no-all">
+							<a href="/images/portfolio6.png" data-lightbox="gallery" data-title="Галерея">
+								<img src = "/images/portfolio6.png" alt = "Глянцевый">
+								<div class="label"><span>Тип: </span> Глянцевый</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="order_and_reviews">
+			<div class="orders">
+				<div class="container">
+					<div class="row">
+						<h1>Заказать натяжной потолок просто!</h1>
+						<h2>Просто введите свой номер телефона и мы Вам перезвоним</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<input type = "text" id="input_phone" name="input_phone">
+					<span class="arrow_right"></span>
+					<a href = "" class="call_me">Перезвоните мне</a>
+				</div>
+			</div>
+			<div class="reviews">
+				<div class="container">
+					<div class="row">
+						<h2 class="title left">Отзывы</h2>
+						<div id="reviews_slider">
+							<div class="item">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="contacts">
+			<div class="container">
+				<div class="row">
+					<h2 class="title">Контакты</h2>
+					<div class="col-xs-6 no-left">
+						<img src = "/images/contacts_photo.png" id="manager" alt = "Фото менеджера">
+						<h3>Контактные данные</h3>
+						<span class="phone main">+375 44 769-84-31</span>
+						<span class="email main">vika151076@mail.ru</span>
+						<span class="locate main">г. Могилев, ул. Чайковского 8, пав.51</span>
+						<span class="work main"><i>пн-пт :</i> 9.00-19.00 <i>сб-вс :</i> 9.00-17.00 </span>
+					</div>
+					<div class="col-xs-6 no-right">
+						<h3>Обратная связь</h3>
+						<div class="form-group">
+							<div class="col-xs-6 no-left">
+								<input type = "text" name="fio" id="fio" placeholder="Ваше имя *">
+							</div>
+							<div class="col-xs-6 no-right">
+								<input type = "text" name="email" id="email" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-6 no-left">
+								<input type = "text" name="phone" id="phone" placeholder="Ваш телефон *">
+							</div>
+							<div class="col-xs-6 no-right">
+								<input type = "text" name="text" id="text" placeholder="Текст сообщения">
+							</div>
+						</div>
+						<a href = "">Отправить письмо</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=KEGhsc1YrbrlU9iyJwM6IMqltqNhOLJW&width=100%&height=540&lang=ru_RU&sourceType=constructor&scroll=true"></script>
 	</div>
 
 </body>
