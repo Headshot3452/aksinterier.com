@@ -118,6 +118,9 @@ header {
     line-height: 68px;
     margin-top: 33px;
     margin-left: 20px;
+    &:hover {
+      opacity: .9;
+    }
   }
   .phone {
     font-size: 18px;
@@ -360,6 +363,7 @@ p {
       padding-right: 0;
       margin-top: 210px;
       border-radius: 0;
+      top: 0;
     }
   }
   .slick-arrow {
@@ -392,6 +396,9 @@ p {
   top: 513px;
   z-index: 9999;
   position: absolute;
+  &:hover {
+    opacity: .9;
+  }
 }
 
 .portfolio {
@@ -408,6 +415,9 @@ p {
     position: absolute;
     padding-left: 40px;
     background: #fff url("/images/projects.png") no-repeat 17px 18px;
+    &:hover {
+      opacity: .9;
+    }
   }
   .title {
     margin-top: 5px;
@@ -443,6 +453,7 @@ p {
       padding-left: 0;
       padding-right: 0;
       font-weight: normal;
+      cursor: url("/images/zoom.png"), auto;
       span {
         font-size: 18px;
         text-transform: none;
@@ -514,6 +525,9 @@ p {
     margin-top: -130px;
     margin-left: 695px;
     background: #322574 url("/images/call_me.png") no-repeat 40px 23px;
+    &:hover {
+      opacity: .9;
+    }
   }
   .reviews {
     padding-top: 30px;
@@ -581,7 +595,7 @@ p {
       }
     }
   }
-  a {
+  a.send_email {
     width: 568px;
     height: 64px;
     background-color: #fff;
@@ -589,5 +603,8 @@ p {
     color: #161450;
     text-align: center;
     line-height: 64px;
+    &:hover {
+      opacity: .9;
+    }
   }
 }

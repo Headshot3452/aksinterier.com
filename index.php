@@ -31,11 +31,11 @@
 								<a href = "">Заказать обратный звонок</a>
 							</div>
 							<ul class="nav">
-								<li><a href = "">Виды потолков</a></li>
-								<li><a href = "">О компании</a></li>
-								<li><a href = "">Портфолио</a></li>
-								<li><a href = "">Отзывы</a></li>
-								<li><a href = "">Контакты</a></li>
+								<li><a href = "#typeCeiling">Виды потолков</a></li>
+								<li><a href = "#about">О компании</a></li>
+								<li><a href = "#portfolio">Портфолио</a></li>
+								<li><a href = "#reviews">Отзывы</a></li>
+								<li><a href = "#contacts">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 				<div class="container">
 					<div class="row">
 						<div id="main_slider">
-							<h2 class="title">Виды потолков</h2>
+							<h2 class="title" id="typeCeiling">Виды потолков</h2>
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -83,7 +83,7 @@
 								<div class="label">Тканевые</div>
 							</div>
 						</div>
-						<h2 class="title left">О компани</h2>
+						<h2 class="title left" id="about">О компани</h2>
 						<div class="clearfix"></div>
 						<div class="col-xs-8 no-left">
 							<p>
@@ -141,7 +141,7 @@
 			<div class="container">
 				<div class="row">
 					<a href = "" class="download_base">Скачать базу проектов</a>
-					<h2 class="title">Портфолио</h2>
+					<h2 class="title" id="portfolio">Портфолио</h2>
 					<div class="gallery">
 						<div class="col-xs-4 no-all">
 							<a href="/images/portfolio1.png" data-lightbox="gallery" data-title="Галерея">
@@ -202,7 +202,7 @@
 			<div class="reviews">
 				<div class="container">
 					<div class="row">
-						<h2 class="title left">Отзывы</h2>
+						<h2 class="title left" id="reviews">Отзывы</h2>
 						<div id="reviews_slider">
 							<div class="item">
 
@@ -216,7 +216,7 @@
 		<div class="contacts">
 			<div class="container">
 				<div class="row">
-					<h2 class="title">Контакты</h2>
+					<h2 class="title" id="contacts">Контакты</h2>
 					<div class="col-xs-6 no-left">
 						<img src = "/images/contacts_photo.png" id="manager" alt = "Фото менеджера">
 						<h3>Контактные данные</h3>
@@ -243,7 +243,7 @@
 								<input type = "text" name="text" id="text" placeholder="Текст сообщения">
 							</div>
 						</div>
-						<a href = "">Отправить письмо</a>
+						<a href = "" class="send_email">Отправить письмо</a>
 					</div>
 				</div>
 			</div>
@@ -261,5 +261,25 @@
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"></button>',
 		nextArrow: '<button type="button" class="slick-next"></button>',
+	});
+
+	$(function()
+	{
+		$(".gallery .no-all").mouseover(function()
+		{
+			$(this).css("background-color", "transparent").find('img').css("opacity", "0.4");
+		})
+		.mouseout(function()
+		{
+			$(this).css("background-color", "#000").find('img').css("opacity", "0.6");
+		});
+
+		$(".nav a").click(function()
+		{
+			var elementClick = $(this).attr("href");
+			var destination = $(elementClick).offset().top;
+			$("body").animate({scrollTop: destination}, 1100);
+			return false;
+		});
 	});
 </script>
