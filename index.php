@@ -15,6 +15,8 @@
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/slick.min.js" type="text/javascript"></script>
 	<script src="js/lightbox.js" type="text/javascript"></script>
+	<script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script src="js/jquery.validate.min.js" type="text/javascript"></script>
 
 	<div class="wrapper">
 		<div class="triangle_fon">
@@ -25,10 +27,10 @@
 							<img src = "./images/logo.png" alt = "Логотип">
 						</div>
 						<div class="col-xs-8 no-right">
-							<a href = "" class="new_order">Сделать заказ</a>
+							<a href = "" class="new_order" data-toggle="modal" data-target="#modalOrder">Сделать заказ</a>
 							<div class="phone pull-right">
 								Velcom <span>+375 44 <i>769-84-31</i></span>
-								<a href = "">Заказать обратный звонок</a>
+								<a href="" id="to_call_me">Заказать обратный звонок</a>
 							</div>
 							<ul class="nav">
 								<li><a href = "#typeCeiling">Виды потолков</a></li>
@@ -194,9 +196,11 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<input type = "text" id="input_phone" name="input_phone">
-					<span class="arrow_right"></span>
-					<a href = "" class="call_me">Перезвоните мне</a>
+					<form id="form_phone">
+						<input type = "text" id="input_phone" name="input_phone" placeholder="+375 (__) ___ __ __">
+						<span class="arrow_right"></span>
+						<button type="submit" class="call_me" id="call_me">Перезвоните мне</button>
+					</form>
 				</div>
 			</div>
 			<div class="reviews">
@@ -205,7 +209,40 @@
 						<h2 class="title left" id="reviews">Отзывы</h2>
 						<div id="reviews_slider">
 							<div class="item">
-
+								<img src = "/images/review.png" alt = "Отзыв">
+								<p>
+									Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+								    Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д.
+									Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем
+								</p>
+								<span>Иванова Анна</span>
+							</div>
+							<div class="item">
+								<img src = "/images/review.png" alt = "Отзыв">
+								<p>
+									Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+									Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д.
+									Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем
+								</p>
+								<span>Иванова Анна</span>
+							</div>
+							<div class="item">
+								<img src = "/images/review.png" alt = "Отзыв">
+								<p>
+									Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+									Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д.
+									Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем
+								</p>
+								<span>Иванова Анна</span>
+							</div>
+							<div class="item">
+								<img src = "/images/review.png" alt = "Отзыв">
+								<p>
+									Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+									Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д.
+									Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем
+								</p>
+								<span>Иванова Анна</span>
 							</div>
 						</div>
 					</div>
@@ -227,23 +264,25 @@
 					</div>
 					<div class="col-xs-6 no-right">
 						<h3>Обратная связь</h3>
-						<div class="form-group">
-							<div class="col-xs-6 no-left">
-								<input type = "text" name="fio" id="fio" placeholder="Ваше имя *">
+						<form id="form_contacts">
+							<div class="form-group">
+								<div class="col-xs-6 no-left">
+									<input type = "text" name="fio" id="fio" placeholder="Ваше имя *">
+								</div>
+								<div class="col-xs-6 no-right">
+									<input type = "text" name="email" id="email" placeholder="E-mail">
+								</div>
 							</div>
-							<div class="col-xs-6 no-right">
-								<input type = "text" name="email" id="email" placeholder="E-mail">
+							<div class="form-group">
+								<div class="col-xs-6 no-left">
+									<input type = "text" name="phone" id="phone" placeholder="Ваш телефон *">
+								</div>
+								<div class="col-xs-6 no-right">
+									<input type = "text" name="text" id="text" placeholder="Текст сообщения">
+								</div>
 							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-xs-6 no-left">
-								<input type = "text" name="phone" id="phone" placeholder="Ваш телефон *">
-							</div>
-							<div class="col-xs-6 no-right">
-								<input type = "text" name="text" id="text" placeholder="Текст сообщения">
-							</div>
-						</div>
-						<a href = "" class="send_email">Отправить письмо</a>
+							<button href = "" type="submit" class="send_email">Отправить письмо</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -254,6 +293,48 @@
 </body>
 </html>
 
+<div id="modalOrder" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="form_order">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"></button>
+					<h4 class="modal-title">Оставить заявку на заказ</h4>
+				</div>
+				<div class="modal-body">
+					<input type = "text" name="name" id="name" placeholder="Ваше имя *">
+					<input type = "text" name="phone" id="phone" placeholder="Ваш телефон *">
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-default call_me">Перезвоните мне</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="modalOrder_ok" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="form_order">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"></button>
+					<h4 class="modal-title">Заявка успешно отправлена!</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						Скоро наш специалист свяжется <br/>
+					    с Вами..
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-default">Ok</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
 <script>
 	$("#main_slider_inner").slick(
 	{
@@ -261,6 +342,16 @@
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="slick-prev"></button>',
 		nextArrow: '<button type="button" class="slick-next"></button>',
+	});
+
+	$("#reviews_slider").slick(
+	{
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
+		dots: true
 	});
 
 	$(function()
@@ -280,6 +371,162 @@
 			var destination = $(elementClick).offset().top;
 			$("body").animate({scrollTop: destination}, 1100);
 			return false;
+		});
+
+		$("#to_call_me").click(function()
+		{
+			var destination = $(".orders").offset().top;
+			$("body").animate({scrollTop: destination}, 1100);
+			return false;
+		});
+
+		$("#input_phone").mask("+375 (99) 999 99 99");
+
+		$.validator.addMethod("regx", function(value, element, regexpr)
+		{
+			return regexpr.test(value);
+		}, "Введите правильный номер");
+
+		$("#form_phone").validate(
+		{
+			rules:
+			{
+				input_phone:
+				{
+					required: true,
+					regx: /^\+375 \(?([0-9]{2})\) ([0-9]{3}) ([0-9]{2}) ([0-9]{2})$/,
+				},
+			},
+			messages:
+			{
+				input_phone:
+				{
+					required: "Это поле обязательно для заполнения",
+					regx: "Введите правильный номер"
+				},
+			},
+			submitHandler: function()
+			{
+				var data = $('#form_phone').serialize();
+				$.ajax(
+				{
+					type: 'POST',
+					url: 'email.php',
+					data: data,
+					success: function(data)
+					{
+						if (data != '1')
+						{
+							alert(data);
+							$('#form_phone').find('#input_phone').focus();
+						}
+						else
+						{
+							$('#form_phone').trigger('reset');
+							$("#modalOrder_ok").modal('show');
+						}
+					}
+				});
+			}
+		});
+
+		$("#form_contacts").validate(
+		{
+			rules:
+			{
+				fio:
+				{
+					required: true,
+				},
+				phone:
+				{
+					required: true,
+				},
+			},
+			messages:
+			{
+				fio:
+				{
+					required: "Это поле обязательно для заполнения",
+				},
+				phone:
+				{
+					required: "Это поле обязательно для заполнения",
+				},
+			},
+			submitHandler: function()
+			{
+				var data = $('#form_contacts').serialize();
+				$.ajax(
+				{
+					type: 'POST',
+					url: 'email.php',
+					data: data,
+					success: function(data)
+					{
+						if (data != '1')
+						{
+							alert(data);
+							$('#form_contacts').find('#fio').focus();
+						}
+						else
+						{
+							$('#form_contacts').trigger('reset');
+							$("#modalOrder_ok").modal('show');
+						}
+					}
+				});
+			}
+		});
+
+		$("#form_order").validate(
+		{
+			rules:
+			{
+				name:
+				{
+					required: true,
+				},
+				phone:
+				{
+					required: true,
+				},
+			},
+			messages:
+			{
+				name:
+				{
+					required: "Это поле обязательно для заполнения",
+				},
+				phone:
+				{
+					required: "Это поле обязательно для заполнения",
+				},
+			},
+			submitHandler: function()
+			{
+				var data = $('#form_order').serialize();
+				$.ajax(
+				{
+					type: 'POST',
+					url: 'email.php',
+					data: data,
+					success: function(data)
+					{
+						if (data != '1')
+						{
+							alert(data);
+							$('#form_order').find('#name').focus();
+						}
+						else
+						{
+							$('#form_order').trigger('reset');
+							$("#modalOrder").modal('hide');
+							$("#modalOrder_ok").modal('show');
+						}
+					}
+				});
+			}
 		});
 	});
 </script>

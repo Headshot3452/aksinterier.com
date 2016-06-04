@@ -118,8 +118,9 @@ header {
     line-height: 68px;
     margin-top: 33px;
     margin-left: 20px;
-    &:hover {
+    &:hover, &:focus, &:active {
       opacity: .9;
+      text-decoration: none;
     }
   }
   .phone {
@@ -394,7 +395,7 @@ p {
   text-align: center;
   line-height: 64px;
   top: 513px;
-  z-index: 9999;
+  z-index: 1000;
   position: absolute;
   &:hover {
     opacity: .9;
@@ -512,23 +513,6 @@ p {
     margin-left: 625px;
     position: absolute;
   }
-  .call_me {
-    width: 303px;
-    height: 68px;
-    background-color: #322574;
-    color: #fff;
-    font-size: 22px;
-    text-align: center;
-    padding-left: 35px;
-    line-height: 68px;
-    position: absolute;
-    margin-top: -130px;
-    margin-left: 695px;
-    background: #322574 url("/images/call_me.png") no-repeat 40px 23px;
-    &:hover {
-      opacity: .9;
-    }
-  }
   .reviews {
     padding-top: 30px;
     height: 525px;
@@ -537,6 +521,37 @@ p {
       border-color: #19153c;
       margin-bottom: 75px;
     }
+  }
+}
+
+#form_phone {
+  position: relative;
+  label.error {
+    left: 190px;
+    margin-top: -55px;
+  }
+}
+.call_me {
+  width: 303px;
+  height: 68px;
+  background-color: #322574;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  padding-left: 35px;
+  line-height: 68px;
+  position: absolute;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin-top: -130px;
+  margin-left: 695px;
+  background: #322574 url("/images/call_me.png") no-repeat 40px 23px;
+  &:hover, &:focus, &:active {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    opacity: .9;
   }
 }
 .contacts {
@@ -595,16 +610,212 @@ p {
       }
     }
   }
-  a.send_email {
+  button.send_email {
     width: 568px;
     height: 64px;
     background-color: #fff;
     font-size: 22px;
     color: #161450;
+    border: none;
+    outline: none;
     text-align: center;
     line-height: 64px;
     &:hover {
       opacity: .9;
     }
   }
+}
+
+#form_contacts {
+  label.error {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+}
+
+#reviews_slider {
+  .slick-arrow {
+    position: absolute;
+    background: transparent url("/images/reviews_arrow.png") no-repeat;
+    width: 31px;
+    height: 31px;
+    border: none;
+    top: 100%;
+    left: 100%;
+    margin-top: -25px;
+    z-index: 9999;
+    outline: none;
+    &:hover {
+      background-position: 0px -41px;
+    }
+    &.slick-next {
+      transform: rotate(180deg);
+      margin-left: -50px;
+      margin-top: -34.5px;
+    }
+    &.slick-prev {
+      margin-left: -100px;
+    }
+  }
+  .item {
+    & > img {
+      float: left;
+      margin-right: 40px;
+    }
+    span {
+      color: #2b2269;
+      font-size: 18px;
+    }
+  }
+  p {
+    font-family: $rl;
+    font-size: 16px;
+    color: #484242;
+    margin-bottom: 15px;
+  }
+  .slick-dots {
+    text-align: center;
+    padding-left: 60px;
+    position: absolute;
+    width: 100%;
+    margin-top: -20px;
+    li {
+      margin-right: 7px;
+      display: inline-block;
+      background: url("/images/dots.png") no-repeat 0 -30px;
+      &.slick-active {
+        background: url("/images/dots_active.png") no-repeat;
+      }
+      &:hover {
+        background-position: 0px 0px;
+      }
+      button {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        opacity: 0;
+        width: 0px;
+        height: 10px;
+      }
+    }
+  }
+}
+#input_phone {
+  color: #19153c;
+}
+
+#modalOrder, #modalOrder_ok {
+  .modal-dialog {
+    margin-top: 300px;
+    width: 430px;
+  }
+  .modal-header {
+    background: #d6d6d6;
+    h4 {
+      font-size: 24px;
+      color: #161450;
+      text-align: center;
+    }
+  }
+  .close {
+    position: absolute;
+    background: url("/images/modal_close.png") no-repeat;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    left: 100%;
+    top: 0;
+    margin-top: -25px;
+    &:hover {
+      background-position: 0 -44px;
+    }
+  }
+  input {
+    width: 302px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    font-family: $rl;
+    line-height: 50px;
+    font-size: 20px;
+    color: #19123a;
+    margin-bottom: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #706c84;
+  }
+  .modal-body {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .modal-footer {
+    border-top: none;
+    padding-bottom: 32px;
+    button.call_me {
+      margin-top: -9px;
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      line-height: 56px;
+      outline: none;
+      &:hover, &:focus, &:active {
+        background-color: #322574;
+        opacity: .9;
+        outline: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+#modalOrder_ok {
+  .modal-header {
+    background: transparent;
+    border-bottom: none;
+    padding-top: 35px;
+    h4 {
+      font-size: 24px;
+      color: #161450;
+      font-family: $l;
+      padding-left: 65px;
+      text-align: center;
+      background: url("/images/letter_send.png") no-repeat 10px 6px;
+    }
+  }
+  .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  p {
+    color: #6d6765;
+    font-family: $l;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 72px;
+  }
+  .modal-footer {
+    padding-top: 0;
+    text-align: center;
+  }
+  button {
+    color: #ddd;
+    font-size: 22px;
+    width: 90px;
+    height: 68px;
+    background-color: #322574;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+label.error {
+  position: absolute;
+  left: 0;
+  margin-top: 60px;
+  color: red;
+  font-weight: normal;
+  margin-left: 88px;
 }

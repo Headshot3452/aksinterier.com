@@ -101,15 +101,16 @@ header .new_order {
   margin-left: 20px;
 }
 /* line 121, common.scss */
-header .new_order:hover {
+header .new_order:hover, header .new_order:focus, header .new_order:active {
   opacity: .9;
+  text-decoration: none;
 }
-/* line 125, common.scss */
+/* line 126, common.scss */
 header .phone {
   font-size: 18px;
   color: #969696;
 }
-/* line 128, common.scss */
+/* line 129, common.scss */
 header .phone span {
   color: #000;
   font-size: 36px;
@@ -117,13 +118,13 @@ header .phone span {
   padding-top: 28px;
   margin-left: 15px;
 }
-/* line 135, common.scss */
+/* line 136, common.scss */
 header .phone i {
   color: #2b2269;
   font-style: normal;
   font-family: "Lato-Semibold";
 }
-/* line 140, common.scss */
+/* line 141, common.scss */
 header .phone a {
   position: absolute;
   left: 100%;
@@ -133,11 +134,11 @@ header .phone a {
   color: #2b2269;
   border-bottom: 1px dotted #2b2269;
 }
-/* line 148, common.scss */
+/* line 149, common.scss */
 header .phone a:hover {
   border-bottom: 1px dotted transparent;
 }
-/* line 153, common.scss */
+/* line 154, common.scss */
 header .nav {
   float: right;
   color: #322574;
@@ -145,43 +146,43 @@ header .nav {
   text-transform: uppercase;
   margin-top: 1px;
 }
-/* line 159, common.scss */
+/* line 160, common.scss */
 header .nav li {
   float: left;
 }
-/* line 161, common.scss */
+/* line 162, common.scss */
 header .nav li a {
   line-height: 88px;
   padding: 0 19px;
   font-size: 18px;
   color: #000;
 }
-/* line 166, common.scss */
+/* line 167, common.scss */
 header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header .nav li a.active {
   color: #322574;
   background: transparent url("../images/menu_hover.png") no-repeat 50% 100%;
 }
 
 @media (min-width: 1260px) {
-  /* line 176, common.scss */
+  /* line 177, common.scss */
   header .nav {
     margin-right: -19px;
   }
 }
 @media (max-width: 1260px) {
-  /* line 185, common.scss */
+  /* line 186, common.scss */
   header .nav li a {
     padding: 0 17px;
   }
 }
-/* line 193, common.scss */
+/* line 194, common.scss */
 .wrapper {
   min-width: 1170px;
   overflow: hidden;
   background: linear-gradient(transparent 0px, transparent 1675px, #19153B 1675px, #19153b 1850px, transparent 1850px);
 }
 
-/* line 199, common.scss */
+/* line 200, common.scss */
 .triangle_fon {
   background: url("../images/right_triangle.png");
   background-repeat: no-repeat;
@@ -189,29 +190,29 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
 }
 
 @media (max-width: 1750px) {
-  /* line 206, common.scss */
+  /* line 207, common.scss */
   .triangle_fon {
     background-position: calc(100% + 100px) 1016px;
   }
 }
 @media (max-width: 1540px) {
-  /* line 212, common.scss */
+  /* line 213, common.scss */
   .triangle_fon {
     background-position: calc(100% + 200px) 1016px;
   }
 }
 @media (max-width: 1340px) {
-  /* line 218, common.scss */
+  /* line 219, common.scss */
   .triangle_fon {
     background-position: calc(100% + 300px) 1016px;
   }
 }
-/* line 223, common.scss */
+/* line 224, common.scss */
 .container {
   min-width: 1170px;
 }
 
-/* line 226, common.scss */
+/* line 227, common.scss */
 .slider {
   position: relative;
   z-index: -1;
@@ -219,13 +220,13 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   background-repeat: no-repeat;
   height: 969px;
 }
-/* line 232, common.scss */
+/* line 233, common.scss */
 .slider .fon {
   background: url("../images/slider_fon.png"), linear-gradient(transparent 0, #19153b 969px);
   height: 1485px;
   background-repeat: no-repeat;
 }
-/* line 237, common.scss */
+/* line 238, common.scss */
 .slider .spec {
   position: relative;
   z-index: 1;
@@ -235,7 +236,7 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   font-size: 36px;
   background: linear-gradient(to right, #292e64 0%, #292e64 30%, transparent 30%);
 }
-/* line 245, common.scss */
+/* line 246, common.scss */
 .slider .spec h1 {
   background-color: #292e64;
   float: left;
@@ -243,12 +244,12 @@ header .nav li a:hover, header .nav li a:focus, header .nav li a:active, header 
   line-height: 88px;
   margin: 0;
 }
-/* line 251, common.scss */
+/* line 252, common.scss */
 .slider .spec h1 span {
   font-family: "Lato-Bold";
 }
 
-/* line 257, common.scss */
+/* line 258, common.scss */
 h2.title {
   color: #fff;
   font-size: 30px;
@@ -261,7 +262,7 @@ h2.title {
   left: 100%;
   margin-left: calc(-25% + 15px);
 }
-/* line 268, common.scss */
+/* line 269, common.scss */
 h2.title.left {
   right: 100%;
   left: 0;
@@ -271,7 +272,7 @@ h2.title.left {
   left: auto;
 }
 
-/* line 277, common.scss */
+/* line 278, common.scss */
 p {
   color: #fff;
   font-size: 16px;
@@ -281,7 +282,7 @@ p {
   line-height: 1.6em;
 }
 
-/* line 286, common.scss */
+/* line 287, common.scss */
 .description {
   padding-top: 65px;
   background-color: #19153b;
@@ -290,7 +291,7 @@ p {
   z-index: -1;
   background: url("../images/description_fon.png") 40%;
 }
-/* line 292, common.scss */
+/* line 293, common.scss */
 .description h1 {
   font-family: "Lato-Light";
   font-size: 30px;
@@ -298,12 +299,12 @@ p {
   text-transform: uppercase;
   margin-bottom: 95px;
 }
-/* line 298, common.scss */
+/* line 299, common.scss */
 .description h1 span {
   font-size: 36px;
   font-family: "Lato-Medium";
 }
-/* line 303, common.scss */
+/* line 304, common.scss */
 .description .description_block {
   float: left;
   font-size: 20px;
@@ -312,58 +313,58 @@ p {
   margin-right: 60px;
   margin-bottom: 105px;
 }
-/* line 311, common.scss */
+/* line 312, common.scss */
 .description .description_block.double img {
   vertical-align: -40px;
 }
-/* line 314, common.scss */
+/* line 315, common.scss */
 .description .description_block.double span {
   width: 210px;
 }
-/* line 319, common.scss */
+/* line 320, common.scss */
 .description .margin_right {
   margin-right: 25px;
 }
-/* line 322, common.scss */
+/* line 323, common.scss */
 .description .margin_left {
   margin-left: 25px;
 }
 
-/* line 328, common.scss */
+/* line 329, common.scss */
 #main_slider {
   position: absolute;
   top: 530px;
   width: 1170px;
 }
-/* line 332, common.scss */
+/* line 333, common.scss */
 #main_slider .title {
   margin-top: 0;
 }
 
-/* line 336, common.scss */
+/* line 337, common.scss */
 .content {
   padding-bottom: 40px;
 }
 
-/* line 339, common.scss */
+/* line 340, common.scss */
 #main_slider_inner {
   margin-top: -340px;
   margin-bottom: 60px;
 }
-/* line 342, common.scss */
+/* line 343, common.scss */
 #main_slider_inner .item {
   height: 330px;
   position: relative;
   background-color: #000;
 }
-/* line 346, common.scss */
+/* line 347, common.scss */
 #main_slider_inner .item img {
   height: 100%;
   opacity: .6;
   object-fit: cover;
   width: 100%;
 }
-/* line 352, common.scss */
+/* line 353, common.scss */
 #main_slider_inner .item .label {
   font-size: 20px;
   color: #fff;
@@ -380,7 +381,7 @@ p {
   border-radius: 0;
   top: 0;
 }
-/* line 369, common.scss */
+/* line 370, common.scss */
 #main_slider_inner .slick-arrow {
   width: 34px;
   height: 34px;
@@ -390,20 +391,20 @@ p {
   background: rgba(255, 255, 255, 0.4) url("../images/slider_arrow.png") no-repeat 12px 5px;
   opacity: .4;
 }
-/* line 377, common.scss */
+/* line 378, common.scss */
 #main_slider_inner .slick-arrow:hover {
   background: rgba(255, 255, 255, 0.6) url("../images/slider_arrow.png") no-repeat 12px 5px;
 }
-/* line 380, common.scss */
+/* line 381, common.scss */
 #main_slider_inner .slick-arrow.slick-next {
   left: 36px;
 }
-/* line 383, common.scss */
+/* line 384, common.scss */
 #main_slider_inner .slick-arrow.slick-prev {
   transform: rotate(180deg);
 }
 
-/* line 388, common.scss */
+/* line 389, common.scss */
 .give_sale {
   width: 295px;
   height: 64px;
@@ -413,21 +414,21 @@ p {
   text-align: center;
   line-height: 64px;
   top: 513px;
-  z-index: 9999;
+  z-index: 1000;
   position: absolute;
 }
-/* line 399, common.scss */
+/* line 400, common.scss */
 .give_sale:hover {
   opacity: .9;
 }
 
-/* line 404, common.scss */
+/* line 405, common.scss */
 .portfolio {
   background: url("/images/portfolio_fon.png");
   height: 1050px;
   padding-top: 65px;
 }
-/* line 408, common.scss */
+/* line 409, common.scss */
 .portfolio .download_base {
   width: 310px;
   height: 64px;
@@ -439,27 +440,27 @@ p {
   padding-left: 40px;
   background: #fff url("/images/projects.png") no-repeat 17px 18px;
 }
-/* line 418, common.scss */
+/* line 419, common.scss */
 .portfolio .download_base:hover {
   opacity: .9;
 }
-/* line 422, common.scss */
+/* line 423, common.scss */
 .portfolio .title {
   margin-top: 5px;
 }
-/* line 425, common.scss */
+/* line 426, common.scss */
 .portfolio .gallery {
   margin-top: 74px;
 }
-/* line 427, common.scss */
+/* line 428, common.scss */
 .portfolio .gallery div {
   background-color: #000;
 }
-/* line 430, common.scss */
+/* line 431, common.scss */
 .portfolio .gallery a {
   width: 100%;
 }
-/* line 433, common.scss */
+/* line 434, common.scss */
 .portfolio .gallery img {
   opacity: .6;
   height: 251px;
@@ -467,7 +468,7 @@ p {
   object-fit: cover;
   cursor: url("/images/zoom.png"), auto;
 }
-/* line 440, common.scss */
+/* line 441, common.scss */
 .portfolio .gallery .label {
   font-size: 20px;
   background-color: transparent;
@@ -486,27 +487,27 @@ p {
   font-weight: normal;
   cursor: url("/images/zoom.png"), auto;
 }
-/* line 457, common.scss */
+/* line 458, common.scss */
 .portfolio .gallery .label span {
   font-size: 18px;
   text-transform: none;
   font-family: "lato-LightItalic";
 }
 
-/* line 465, common.scss */
+/* line 466, common.scss */
 .order_and_reviews {
   background: url("/images/reviews_fon.png");
   height: 880px;
   background-position: 260px;
 }
-/* line 469, common.scss */
+/* line 470, common.scss */
 .order_and_reviews .orders {
   position: relative;
   z-index: -1;
   height: 355px;
   background: #d6d6d6;
 }
-/* line 474, common.scss */
+/* line 475, common.scss */
 .order_and_reviews .orders h1 {
   font-size: 30px;
   color: #19153c;
@@ -518,14 +519,14 @@ p {
   padding-bottom: 40px;
   background: url("/images/orders.png") no-repeat center bottom;
 }
-/* line 485, common.scss */
+/* line 486, common.scss */
 .order_and_reviews .orders h2 {
   color: #19153c;
   font-family: "Lato-Light";
   font-size: 30px;
   text-align: center;
 }
-/* line 492, common.scss */
+/* line 493, common.scss */
 .order_and_reviews input {
   height: 68px;
   width: 400px;
@@ -541,7 +542,7 @@ p {
   font-family: "Lato-Medium";
   margin-top: -130px;
 }
-/* line 507, common.scss */
+/* line 508, common.scss */
 .order_and_reviews .arrow_right {
   width: 21px;
   height: 37px;
@@ -550,8 +551,30 @@ p {
   margin-left: 625px;
   position: absolute;
 }
-/* line 515, common.scss */
-.order_and_reviews .call_me {
+/* line 516, common.scss */
+.order_and_reviews .reviews {
+  padding-top: 30px;
+  height: 525px;
+}
+/* line 519, common.scss */
+.order_and_reviews .reviews h2 {
+  color: #19153c;
+  border-color: #19153c;
+  margin-bottom: 75px;
+}
+
+/* line 527, common.scss */
+#form_phone {
+  position: relative;
+}
+/* line 529, common.scss */
+#form_phone label.error {
+  left: 190px;
+  margin-top: -55px;
+}
+
+/* line 534, common.scss */
+.call_me {
   width: 303px;
   height: 68px;
   background-color: #322574;
@@ -561,42 +584,37 @@ p {
   padding-left: 35px;
   line-height: 68px;
   position: absolute;
+  color: #fff;
+  border: none;
+  outline: none;
   margin-top: -130px;
   margin-left: 695px;
   background: #322574 url("/images/call_me.png") no-repeat 40px 23px;
 }
-/* line 528, common.scss */
-.order_and_reviews .call_me:hover {
+/* line 550, common.scss */
+.call_me:hover, .call_me:focus, .call_me:active {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
   opacity: .9;
 }
-/* line 532, common.scss */
-.order_and_reviews .reviews {
-  padding-top: 30px;
-  height: 525px;
-}
-/* line 535, common.scss */
-.order_and_reviews .reviews h2 {
-  color: #19153c;
-  border-color: #19153c;
-  margin-bottom: 75px;
-}
 
-/* line 542, common.scss */
+/* line 557, common.scss */
 .contacts {
   height: 625px;
   background-image: url("/images/contacts_fon.png");
 }
-/* line 545, common.scss */
+/* line 560, common.scss */
 .contacts h2.title {
   margin-top: 70px;
   margin-bottom: 65px;
 }
-/* line 549, common.scss */
+/* line 564, common.scss */
 .contacts #manager {
   float: left;
   margin-right: 30px;
 }
-/* line 553, common.scss */
+/* line 568, common.scss */
 .contacts input {
   width: 100%;
   height: 68px;
@@ -609,7 +627,7 @@ p {
   margin-bottom: 50px;
   border-bottom: 1px solid #a2a4b6;
 }
-/* line 565, common.scss */
+/* line 580, common.scss */
 .contacts h3 {
   font-family: "lato-LightItalic";
   color: #fff;
@@ -617,50 +635,269 @@ p {
   font-size: 22px;
   margin-bottom: 40px;
 }
-/* line 572, common.scss */
+/* line 587, common.scss */
 .contacts .main {
   color: #fff;
   font-size: 24px;
   padding-left: 70px;
   margin-bottom: 45px;
 }
-/* line 578, common.scss */
+/* line 593, common.scss */
 .contacts .email {
   background: url("/images/contacts_email.png") no-repeat left center;
 }
-/* line 581, common.scss */
+/* line 596, common.scss */
 .contacts .phone {
   background: url("/images/contacts_phone.png") no-repeat left center;
 }
-/* line 584, common.scss */
+/* line 599, common.scss */
 .contacts .locate {
   background: url("/images/contacts_locate.png") no-repeat left center;
 }
-/* line 587, common.scss */
+/* line 602, common.scss */
 .contacts .work {
   background: url("/images/contacts_work.png") no-repeat left center;
 }
-/* line 589, common.scss */
+/* line 604, common.scss */
 .contacts .work i {
   font-size: 18px;
   font-style: normal;
   display: inline-block;
 }
-/* line 593, common.scss */
+/* line 608, common.scss */
 .contacts .work i:last-child {
   margin-left: 52px;
 }
-/* line 598, common.scss */
-.contacts a.send_email {
+/* line 613, common.scss */
+.contacts button.send_email {
   width: 568px;
   height: 64px;
   background-color: #fff;
   font-size: 22px;
   color: #161450;
+  border: none;
+  outline: none;
   text-align: center;
   line-height: 64px;
 }
-/* line 606, common.scss */
-.contacts a.send_email:hover {
+/* line 623, common.scss */
+.contacts button.send_email:hover {
   opacity: .9;
+}
+
+/* line 630, common.scss */
+#form_contacts label.error {
+  margin-left: 0;
+  margin-top: 80px;
+}
+
+/* line 637, common.scss */
+#reviews_slider .slick-arrow {
+  position: absolute;
+  background: transparent url("/images/reviews_arrow.png") no-repeat;
+  width: 31px;
+  height: 31px;
+  border: none;
+  top: 100%;
+  left: 100%;
+  margin-top: -25px;
+  z-index: 9999;
+  outline: none;
+}
+/* line 648, common.scss */
+#reviews_slider .slick-arrow:hover {
+  background-position: 0px -41px;
+}
+/* line 651, common.scss */
+#reviews_slider .slick-arrow.slick-next {
+  transform: rotate(180deg);
+  margin-left: -50px;
+  margin-top: -34.5px;
+}
+/* line 656, common.scss */
+#reviews_slider .slick-arrow.slick-prev {
+  margin-left: -100px;
+}
+/* line 661, common.scss */
+#reviews_slider .item > img {
+  float: left;
+  margin-right: 40px;
+}
+/* line 665, common.scss */
+#reviews_slider .item span {
+  color: #2b2269;
+  font-size: 18px;
+}
+/* line 670, common.scss */
+#reviews_slider p {
+  font-family: "Roboto-Light";
+  font-size: 16px;
+  color: #484242;
+  margin-bottom: 15px;
+}
+/* line 676, common.scss */
+#reviews_slider .slick-dots {
+  text-align: center;
+  padding-left: 60px;
+  position: absolute;
+  width: 100%;
+  margin-top: -20px;
+}
+/* line 682, common.scss */
+#reviews_slider .slick-dots li {
+  margin-right: 7px;
+  display: inline-block;
+  background: url("/images/dots.png") no-repeat 0 -30px;
+}
+/* line 686, common.scss */
+#reviews_slider .slick-dots li.slick-active {
+  background: url("/images/dots_active.png") no-repeat;
+}
+/* line 689, common.scss */
+#reviews_slider .slick-dots li:hover {
+  background-position: 0px 0px;
+}
+/* line 692, common.scss */
+#reviews_slider .slick-dots li button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  opacity: 0;
+  width: 0px;
+  height: 10px;
+}
+
+/* line 703, common.scss */
+#input_phone {
+  color: #19153c;
+}
+
+/* line 708, common.scss */
+#modalOrder .modal-dialog, #modalOrder_ok .modal-dialog {
+  margin-top: 300px;
+  width: 430px;
+}
+/* line 712, common.scss */
+#modalOrder .modal-header, #modalOrder_ok .modal-header {
+  background: #d6d6d6;
+}
+/* line 714, common.scss */
+#modalOrder .modal-header h4, #modalOrder_ok .modal-header h4 {
+  font-size: 24px;
+  color: #161450;
+  text-align: center;
+}
+/* line 720, common.scss */
+#modalOrder .close, #modalOrder_ok .close {
+  position: absolute;
+  background: url("/images/modal_close.png") no-repeat;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  left: 100%;
+  top: 0;
+  margin-top: -25px;
+}
+/* line 730, common.scss */
+#modalOrder .close:hover, #modalOrder_ok .close:hover {
+  background-position: 0 -44px;
+}
+/* line 734, common.scss */
+#modalOrder input, #modalOrder_ok input {
+  width: 302px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  font-family: "Roboto-Light";
+  line-height: 50px;
+  font-size: 20px;
+  color: #19123a;
+  margin-bottom: 35px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #706c84;
+}
+/* line 748, common.scss */
+#modalOrder .modal-body, #modalOrder_ok .modal-body {
+  text-align: center;
+  padding-top: 30px;
+}
+/* line 752, common.scss */
+#modalOrder .modal-footer, #modalOrder_ok .modal-footer {
+  border-top: none;
+  padding-bottom: 32px;
+}
+/* line 755, common.scss */
+#modalOrder .modal-footer button.call_me, #modalOrder_ok .modal-footer button.call_me {
+  margin-top: -9px;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  line-height: 56px;
+  outline: none;
+}
+/* line 763, common.scss */
+#modalOrder .modal-footer button.call_me:hover, #modalOrder .modal-footer button.call_me:focus, #modalOrder .modal-footer button.call_me:active, #modalOrder_ok .modal-footer button.call_me:hover, #modalOrder_ok .modal-footer button.call_me:focus, #modalOrder_ok .modal-footer button.call_me:active {
+  background-color: #322574;
+  opacity: .9;
+  outline: none;
+  color: #fff;
+}
+
+/* line 774, common.scss */
+#modalOrder_ok .modal-header {
+  background: transparent;
+  border-bottom: none;
+  padding-top: 35px;
+}
+/* line 778, common.scss */
+#modalOrder_ok .modal-header h4 {
+  font-size: 24px;
+  color: #161450;
+  font-family: "Lato-Regular";
+  padding-left: 65px;
+  text-align: center;
+  background: url("/images/letter_send.png") no-repeat 10px 6px;
+}
+/* line 787, common.scss */
+#modalOrder_ok .modal-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 791, common.scss */
+#modalOrder_ok p {
+  color: #6d6765;
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  text-align: left;
+  padding-left: 72px;
+}
+/* line 798, common.scss */
+#modalOrder_ok .modal-footer {
+  padding-top: 0;
+  text-align: center;
+}
+/* line 802, common.scss */
+#modalOrder_ok button {
+  color: #ddd;
+  font-size: 22px;
+  width: 90px;
+  height: 68px;
+  background-color: #322574;
+}
+/* line 808, common.scss */
+#modalOrder_ok button:hover {
+  opacity: .9;
+}
+
+/* line 814, common.scss */
+label.error {
+  position: absolute;
+  left: 0;
+  margin-top: 60px;
+  color: red;
+  font-weight: normal;
+  margin-left: 88px;
 }
