@@ -328,7 +328,7 @@
 					</p>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" class="btn btn-default">Ok</button>
+					<button type="submit" data-dismiss="modal" class="btn btn-default">Ok</button>
 				</div>
 			</form>
 		</div>
